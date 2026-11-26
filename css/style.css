@@ -1,0 +1,843 @@
+/* Tema IKEA: azul y amarillo suecos, tipografía sans limpia. */
+:root {
+  --ikea-blue: #0058a3;
+  --ikea-blue-dark: #003e72;
+  --ikea-yellow: #ffdb00;
+  --ink: #111111;
+  --muted: #484848;
+  --sky: #eaf2fa;
+  --sand: #f5f5f5;
+  --border: #dfdfdf;
+  --nav-height: 4.5rem;
+}
+
+body {
+  padding-top: var(--nav-height);
+  color: var(--ink);
+  font-family: "Noto Sans", Verdana, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ikea-blue);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1040;
+  top: .5rem;
+  left: .5rem;
+  padding: .5rem 1rem;
+  background: #fff;
+  color: var(--ikea-blue-dark);
+}
+
+/* ---------- Navegación ---------- */
+.site-nav {
+  min-height: var(--nav-height);
+  background: #fff;
+  border-bottom: 4px solid var(--ikea-yellow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--ink);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+/* Marca propia: caja plana azul con franja amarilla. */
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 1.6rem;
+  border-radius: .2rem;
+  background: var(--ikea-blue);
+  box-shadow: inset 0 -.45rem 0 var(--ikea-yellow);
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.site-nav .nav-link {
+  padding: .5rem .8rem;
+  border-radius: 2rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  background: var(--sky);
+  color: var(--ikea-blue-dark);
+}
+
+.site-nav .navbar-toggler {
+  border-color: var(--border);
+}
+
+.site-nav .navbar-toggler:focus-visible {
+  outline: 3px solid var(--ikea-blue);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* ---------- Pie ---------- */
+.site-footer {
+  padding-block: 1.5rem;
+  background: var(--ikea-blue);
+  color: #fff;
+}
+
+.site-footer small {
+  color: #dce9f6;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: clamp(3rem, 6vw, 6rem);
+  background: var(--ikea-blue);
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: .25rem .75rem;
+  border-radius: 2rem;
+  background: var(--ikea-yellow);
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.hero-title,
+.page-title,
+.section-title {
+  font-weight: 800;
+  letter-spacing: -.035em;
+}
+
+.hero-title {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.04;
+}
+
+.hero-title span {
+  color: var(--ikea-yellow);
+}
+
+.intro {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+}
+
+.hero .intro {
+  color: #e3eef9;
+}
+
+/* Tarjetas de cifras en el hero, como etiquetas de precio amarillas. */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat {
+  padding: 1.25rem;
+  border-radius: .25rem;
+  background: var(--ikea-yellow);
+  color: var(--ink);
+  box-shadow: 0 14px 30px rgb(0 0 0 / 18%);
+}
+
+.stat:nth-child(even) {
+  background: #fff;
+}
+
+.stat strong {
+  display: block;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+/* ---------- Botones ---------- */
+.btn-accent,
+.btn-yellow {
+  --bs-btn-font-weight: 700;
+  --bs-btn-border-radius: 2rem;
+  padding: .7rem 1.4rem;
+}
+
+.btn-accent {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--ikea-blue);
+  --bs-btn-border-color: var(--ikea-blue);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ikea-blue-dark);
+  --bs-btn-hover-border-color: var(--ikea-blue-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--ikea-blue-dark);
+  --bs-btn-active-border-color: var(--ikea-blue-dark);
+  --bs-btn-disabled-bg: var(--ikea-blue);
+  --bs-btn-disabled-border-color: var(--ikea-blue);
+  --bs-btn-focus-shadow-rgb: 0, 88, 163;
+}
+
+.btn-yellow {
+  --bs-btn-color: var(--ink);
+  --bs-btn-bg: var(--ikea-yellow);
+  --bs-btn-border-color: var(--ikea-yellow);
+  --bs-btn-hover-color: var(--ink);
+  --bs-btn-hover-bg: #f0cd00;
+  --bs-btn-hover-border-color: #f0cd00;
+  --bs-btn-active-color: var(--ink);
+  --bs-btn-active-bg: #e0bf00;
+  --bs-btn-active-border-color: #e0bf00;
+  --bs-btn-focus-shadow-rgb: 255, 219, 0;
+}
+
+.btn-accent span,
+.btn-yellow span {
+  margin-inline-start: .35rem;
+}
+
+/* ---------- Secciones ---------- */
+.section-space {
+  padding-block: clamp(2.75rem, 6vw, 5rem);
+}
+
+.section-alt {
+  background: var(--sand);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+}
+
+.section-num {
+  display: inline-grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-inline-end: .6rem;
+  border-radius: 50%;
+  background: var(--ikea-yellow);
+  color: var(--ink);
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.service-card,
+.fact-card {
+  --bs-card-border-color: var(--border);
+  --bs-card-border-radius: .35rem;
+}
+
+.service-card {
+  border-top: 5px solid var(--ikea-blue);
+}
+
+.service-card.is-digital {
+  border-top-color: var(--ikea-yellow);
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+.card-year {
+  color: var(--ikea-blue);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+/* Ficha de empresa como lista de definición. */
+.fact-list {
+  margin: 0;
+}
+
+.fact-list dt {
+  color: var(--ikea-blue);
+  font-weight: 800;
+}
+
+.fact-list dd {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.fact-list dd:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+/* Tablas temáticas. */
+.ikea-table {
+  --bs-table-striped-bg: var(--sky);
+  margin-bottom: 0;
+}
+
+.ikea-table thead th {
+  background: var(--ikea-blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+.table-wrap {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: .35rem;
+}
+
+.badge-yes {
+  background: var(--ikea-yellow);
+  color: var(--ink);
+}
+
+.badge-no {
+  background: var(--border);
+  color: var(--ink);
+}
+
+/* Barras de ventas por región. */
+.region-bar {
+  height: 1.4rem;
+  border-radius: 2rem;
+  background: var(--sky);
+}
+
+.region-bar .progress-bar {
+  border-radius: 2rem;
+  background: var(--ikea-blue);
+  font-weight: 700;
+}
+
+.region-bar.alt .progress-bar {
+  background: var(--ikea-yellow);
+  color: var(--ink);
+}
+
+/* Figuras del dossier. */
+.figure-frame {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: .35rem;
+  background: #fff;
+}
+
+.figure-frame img {
+  width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  margin-top: .75rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* Línea temporal vertical. */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.1rem;
+  width: 4px;
+  background: var(--ikea-blue);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 1.75rem 3.25rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: .35rem;
+  left: .45rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 4px solid var(--ikea-blue);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.timeline li.is-digital::before {
+  background: var(--ikea-yellow);
+}
+
+.timeline .t-year {
+  color: var(--ikea-blue);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+/* Foto de cada hito: texto a la izquierda, imagen a la derecha (apiladas en móvil). */
+.timeline li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .85rem;
+}
+
+.t-photo {
+  margin: 0;
+  max-width: 22rem;
+}
+
+.t-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: .35rem;
+  border-bottom: 4px solid var(--ikea-blue);
+  background: var(--sand);
+  box-shadow: 0 .35rem 1rem rgba(0, 0, 0, .12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.timeline li.is-digital .t-photo img {
+  border-bottom-color: var(--ikea-yellow);
+}
+
+.timeline li:hover .t-photo img {
+  transform: translateY(-3px);
+  box-shadow: 0 .6rem 1.4rem rgba(0, 0, 0, .18);
+}
+
+.t-photo figcaption {
+  margin-top: .35rem;
+  font-size: .72rem;
+  line-height: 1.3;
+}
+
+.t-photo figcaption a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.t-photo figcaption a:hover {
+  color: var(--ikea-blue);
+  text-decoration: underline;
+}
+
+/* Foto del fundador bajo "Ficha de empresa". */
+.founder-photo {
+  max-width: 20rem;
+  margin-bottom: 0;
+}
+
+.founder-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: .35rem;
+  border-bottom: 5px solid var(--ikea-yellow);
+  box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .15);
+}
+
+.founder-photo figcaption {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+/* Botón que envuelve cada foto: al hacer clic se amplía. */
+.t-zoom {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.t-zoom::after {
+  content: "⤢";
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .9);
+  color: var(--ikea-blue-dark);
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.t-zoom:hover::after,
+.t-zoom:focus-visible::after {
+  opacity: 1;
+}
+
+/* Visor de imagen ampliada. */
+.visor {
+  max-width: min(92vw, 1000px);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: .5rem;
+  background: #fff;
+  overflow: visible;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .4);
+}
+
+.visor[open] {
+  animation: visor-entra .25s ease;
+}
+
+.visor::backdrop {
+  background: rgba(0, 20, 40, .8);
+}
+
+.visor img {
+  display: block;
+  width: min(92vw, 1000px);
+  max-height: calc(92vh - 4rem);
+  object-fit: contain;
+  border-radius: .5rem .5rem 0 0;
+  border-bottom: 5px solid var(--ikea-yellow);
+  background: #000;
+}
+
+.visor-texto {
+  margin: 0;
+  padding: .75rem 1rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.visor-cerrar {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--ikea-blue);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.visor-cerrar:hover {
+  background: var(--ikea-blue-dark);
+}
+
+body.visor-abierto {
+  overflow: hidden;
+}
+
+@keyframes visor-entra {
+  from { opacity: 0; transform: scale(.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 575.98px) {
+  .visor-cerrar {
+    top: .5rem;
+    right: .5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .timeline li {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .t-photo {
+    max-width: none;
+  }
+}
+
+/* Pasos de Kreativ. */
+.step-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: .35rem;
+  background: var(--sky);
+}
+
+.step-card:nth-child(odd),
+.col:nth-child(odd) > .step-card {
+  background: var(--ikea-yellow);
+}
+
+.step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: .75rem;
+  border-radius: 50%;
+  background: var(--ikea-blue);
+  color: #fff;
+  font-weight: 800;
+}
+
+.note {
+  padding: 1rem 1.25rem;
+  border-left: 5px solid var(--ikea-yellow);
+  background: #fffbe0;
+}
+
+/* ---------- Páginas interiores ---------- */
+.page-intro {
+  padding-block: clamp(3rem, 6vw, 5rem);
+  background: var(--ikea-blue);
+  color: #fff;
+}
+
+.page-intro .intro {
+  color: #e3eef9;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.service-accordion {
+  --bs-accordion-color: var(--ink);
+  --bs-accordion-border-color: var(--border);
+  --bs-accordion-btn-color: var(--ink);
+  --bs-accordion-active-bg: var(--ikea-yellow);
+  --bs-accordion-active-color: var(--ink);
+  --bs-accordion-btn-focus-box-shadow: inset 0 0 0 3px var(--ikea-blue);
+}
+
+.service-accordion .accordion-button {
+  font-weight: 700;
+}
+
+.video-frame {
+  overflow: hidden;
+  border-radius: .35rem;
+  box-shadow: 0 14px 30px rgb(0 0 0 / 15%);
+}
+
+.source-list a {
+  color: var(--ikea-blue);
+  word-break: break-word;
+}
+
+@media (max-width: 767.98px) {
+  .site-nav .navbar-collapse {
+    max-height: calc(100dvh - var(--nav-height));
+    overflow-y: auto;
+  }
+
+  .site-nav .navbar-nav {
+    padding-block: .5rem;
+  }
+}
+
+/* =========================================================
+   Animaciones
+   Casi todo es CSS (transiciones y @keyframes). El JS
+   (js/animaciones.js) solo añade clases al hacer scroll.
+   ========================================================= */
+
+/* ---------- Entrada del hero y de las cabeceras ---------- */
+@keyframes subir {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes pop {
+  0%   { opacity: 0; transform: scale(.85) rotate(-2deg); }
+  70%  { opacity: 1; transform: scale(1.04) rotate(.5deg); }
+  100% { opacity: 1; transform: none; }
+}
+
+.hero .col-lg-6:first-child > *,
+.page-intro .container > * {
+  animation: subir .7s cubic-bezier(.2, .7, .2, 1) backwards;
+}
+
+.hero .col-lg-6:first-child > :nth-child(2),
+.page-intro .container > :nth-child(2) { animation-delay: .12s; }
+.hero .col-lg-6:first-child > :nth-child(3),
+.page-intro .container > :nth-child(3) { animation-delay: .24s; }
+.hero .col-lg-6:first-child > :nth-child(4) { animation-delay: .36s; }
+
+/* Las tarjetas de cifras "caen" una detrás de otra como etiquetas de precio. */
+.stat {
+  animation: pop .6s cubic-bezier(.2, .7, .2, 1) backwards;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.stat:nth-child(1) { animation-delay: .3s; }
+.stat:nth-child(2) { animation-delay: .42s; }
+.stat:nth-child(3) { animation-delay: .54s; }
+.stat:nth-child(4) { animation-delay: .66s; }
+
+.stat:hover {
+  transform: translateY(-6px) rotate(-1.5deg);
+  box-shadow: 0 22px 40px rgb(0 0 0 / 25%);
+}
+.stat:nth-child(even):hover { transform: translateY(-6px) rotate(1.5deg); }
+
+/* Subrayado amarillo que se dibuja bajo "a la IA en casa." */
+.hero-title span {
+  background: linear-gradient(var(--ikea-yellow), var(--ikea-yellow)) no-repeat left bottom / 0 .12em;
+  animation: subrayar .8s .8s ease-out forwards;
+}
+@keyframes subrayar { to { background-size: 100% .12em; } }
+
+/* Fondo del hero con un brillo que se mueve muy despacio. */
+.hero,
+.page-intro {
+  background-image: radial-gradient(circle at 20% 30%, rgb(255 255 255 / 10%), transparent 45%),
+                    radial-gradient(circle at 80% 70%, rgb(255 219 0 / 10%), transparent 40%);
+  background-size: 200% 200%;
+  animation: brillo 14s ease-in-out infinite alternate;
+}
+@keyframes brillo {
+  from { background-position: 0% 0%; }
+  to   { background-position: 100% 100%; }
+}
+
+/* ---------- Aparición al hacer scroll ---------- */
+.js-anim .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+.js-anim .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Barras de ventas: crecen más despacio que el valor por defecto de Bootstrap. */
+.region-bar .progress-bar {
+  transition: width 1.3s cubic-bezier(.2, .7, .2, 1);
+}
+
+/* ---------- Micro-interacciones al pasar el ratón ---------- */
+.service-card,
+.fact-card,
+.step-card,
+.figure-frame {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.service-card:hover,
+.step-card:hover,
+.figure-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgb(0 0 0 / 12%);
+}
+
+.step-num,
+.section-num {
+  transition: transform .4s cubic-bezier(.3, 1.6, .5, 1);
+}
+.step-card:hover .step-num,
+.section-title:hover .section-num {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Logo: la caja azul "salta" al pasar el ratón. */
+.brand:hover .brand-mark {
+  animation: saltito .5s ease;
+}
+@keyframes saltito {
+  30% { transform: translateY(-5px) rotate(-6deg); }
+  60% { transform: translateY(1px) rotate(3deg); }
+}
+
+/* Enlaces del menú y botones con transición suave. */
+.site-nav .nav-link {
+  transition: background-color .2s ease, color .2s ease;
+}
+.btn-yellow,
+.btn-accent,
+.hero .btn-outline-light {
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn-yellow:hover,
+.btn-accent:hover,
+.hero .btn-outline-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+}
+.btn-yellow span,
+.btn-accent span {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.btn-yellow:hover span,
+.btn-accent:hover span {
+  transform: translateX(5px);
+}
+
+/* Filas de la tabla: se resaltan al pasar por encima. */
+.ikea-table tbody tr {
+  transition: background-color .2s ease;
+}
+.ikea-table tbody tr:hover > * {
+  --bs-table-bg-state: #fff6b8;
+}
+
+/* Puntos de la línea temporal: crecen al pasar el ratón. */
+.timeline li::before {
+  transition: transform .25s ease, background-color .25s ease;
+}
+.timeline li:hover::before {
+  transform: scale(1.3);
+  background: var(--ikea-yellow);
+}
+
+/* ---------- Accesibilidad: sin animaciones si el usuario lo pide ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-title span { background-size: 100% .12em; }
+}

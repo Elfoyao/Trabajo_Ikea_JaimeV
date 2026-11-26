@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IKEA Kreativ: el proceso elegido. Escanear la habitación, borrar muebles con IA y colocar muebles IKEA a escala.">
+  <title>IKEA Kreativ | IKEA Kreativ · Dossier</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable skip-link" href="#contenido">Saltar al contenido</a>
+
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Dossier IKEA<small>Digitalización · Fase 1</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+              aria-expanded="false" aria-label="Mostrar u ocultar la navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Empresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="evolucion.html">Evolución</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kreativ.html" aria-current="page">IKEA Kreativ</a></li>
+          <li class="nav-item"><a class="nav-link" href="fuentes.html">Fuentes</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <header class="page-intro">
+      <div class="container">
+        <span class="eyebrow">Sección 6 · Proceso elegido</span>
+        <h1 class="page-title">IKEA Kreativ</h1>
+        <p class="intro mb-0">
+          Elige uno de los más de 50 showrooms en 3D o escanea tu propia habitación. La IA borra
+          tus muebles y colocas los de IKEA a escala. Después guardas, compartes o compras el diseño.
+        </p>
+      </div>
+    </header>
+
+    <!-- Pasos del proceso -->
+    <section class="section-space" aria-labelledby="titulo-pasos">
+      <div class="container">
+        <h2 id="titulo-pasos" class="section-title mb-4">Cómo funciona en 5 pasos</h2>
+        <ol class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3 list-unstyled mb-0">
+          <li class="col"><div class="step-card"><span class="step-num">1</span>
+            <p class="mb-0 fw-semibold">Escanear la habitación con el móvil (app) o elegir un showroom 3D.</p></div></li>
+          <li class="col"><div class="step-card"><span class="step-num">2</span>
+            <p class="mb-0 fw-semibold">La IA borra los muebles existentes.</p></div></li>
+          <li class="col"><div class="step-card"><span class="step-num">3</span>
+            <p class="mb-0 fw-semibold">Arrastrar y colocar muebles IKEA a escala.</p></div></li>
+          <li class="col"><div class="step-card"><span class="step-num">4</span>
+            <p class="mb-0 fw-semibold">Guardar el diseño en la cuenta IKEA.</p></div></li>
+          <li class="col"><div class="step-card"><span class="step-num">5</span>
+            <p class="mb-0 fw-semibold">Añadir al carrito o llevar el diseño a la tienda (app).</p></div></li>
+        </ol>
+        <figure class="figure-frame mt-4 mb-0">
+          <img src="img/pasos-kreativ.png" width="2200" height="560" loading="lazy"
+               alt="Diagrama de los cinco pasos de IKEA Kreativ, de escanear la habitación a añadir al carrito.">
+          <figcaption class="figure-caption">Figura 2. Pasos para usar IKEA Kreativ, según IKEA UK, Australia y Bélgica (elaboración propia).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Detalles en acordeón, igual que en la web de referencia -->
+    <section class="section-space section-alt" aria-labelledby="titulo-detalles">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4">
+            <h2 id="titulo-detalles" class="section-title">Lo que hay que saber</h2>
+            <p class="text-secondary mt-3">Despliega cada panel para ver el detalle.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion service-accordion" id="acordeonKreativ">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#escaneo" aria-expanded="true" aria-controls="escaneo">
+                    App y web: cómo se captura la habitación
+                  </button>
+                </h3>
+                <div id="escaneo" class="accordion-collapse collapse show" data-bs-parent="#acordeonKreativ">
+                  <div class="accordion-body">
+                    En la app se escanea la habitación con LiDAR. En la web se escriben las medidas.
+                    También se puede partir de uno de los más de 50 showrooms en 3D.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#ia" aria-expanded="false" aria-controls="ia">
+                    La tecnología: Geomagical Labs
+                  </button>
+                </h3>
+                <div id="ia" class="accordion-collapse collapse" data-bs-parent="#acordeonKreativ">
+                  <div class="accordion-body">
+                    La tecnología viene de Geomagical Labs, empresa de IA visual y 3D que Ingka Investments
+                    compró en 2020. Su IA es la que borra los muebles que ya tienes en la foto.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#limites" aria-expanded="false" aria-controls="limites">
+                    Limitaciones
+                  </button>
+                </h3>
+                <div id="limites" class="accordion-collapse collapse" data-bs-parent="#acordeonKreativ">
+                  <div class="accordion-body">
+                    No sirve para textiles, accesorios de techo ni cocinas completas.
+                    Tampoco he encontrado cuándo llegó Kreativ a España.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#impacto" aria-expanded="false" aria-controls="impacto">
+                    Por qué importa
+                  </button>
+                </h3>
+                <div id="impacto" class="accordion-collapse collapse" data-bs-parent="#acordeonKreativ">
+                  <div class="accordion-body">
+                    Responde a la duda del cliente online sobre si el mueble encaja. El 87 % de la gente quiere
+                    sentirse bien en casa, pero solo la mitad sabe cómo conseguirlo. En FY25 las visitas online
+                    de Ingka subieron un 4,6 % y las de tienda un 1,3 %.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Recursos -->
+    <section class="section-space" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6">
+            <h2 id="titulo-recursos" class="section-title mb-3"><span class="section-num">7</span>Recursos</h2>
+            <h3 class="h5 fw-bold">Vídeo: Kreativ paso a paso</h3>
+            <p>
+              «Come design with me as I explore IKEA’s Kreativ tool!» · canal Mitilak · 2:39. En el
+              vídeo se usa Kreativ dentro de la app de IKEA para diseñar una habitación paso a paso. No es un vídeo oficial de IKEA; el anuncio oficial, más corto, es
+              <a href="https://www.youtube.com/watch?v=kGDGhFKP8Cs">«Imagine your dream home in mixed reality»</a>
+              (IKEA USA · 1:00).
+            </p>
+            <h3 class="h5 fw-bold">Imágenes</h3>
+            <p class="mb-0">
+              Las figuras 1 y 2 son de elaboración propia. Las fotos oficiales (IKEA Museum, IKEA UK,
+              IKEA US) se añadirán citando la fuente.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="video-frame ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/y8oEfvYvEzM"
+                      title="Come design with me as I explore IKEA’s Kreativ tool! (canal Mitilak)"
+                      loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="small text-secondary mt-2 mb-0">
+              Si no se reproduce, ábrelo en
+              <a href="https://www.youtube.com/watch?v=y8oEfvYvEzM">YouTube</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer mt-auto">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <span class="fw-semibold">Dossier IKEA Kreativ · Jaime Villamayor</span>
+      <small>Trabajo académico de Digitalización. No es una web oficial de IKEA.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+          crossorigin="anonymous"></script>
+  <script src="js/animaciones.js"></script>
+</body>
+</html>
